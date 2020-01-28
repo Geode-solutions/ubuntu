@@ -15,7 +15,7 @@ RUN \
   cd kcov_src && \
   cmake . && \
   cmake --build . -- -j2 && \
-  cmake --build . --target install && \
+  cmake --build . --target install
 
 # Set environment variables.
 ENV HOME /root
