@@ -5,7 +5,7 @@ FROM ubuntu:18.04
 RUN \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y build-essential pkg-config binutils-dev software-properties-common git wget python3-dev libcurl4-openssl-dev libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip && \
+  apt-get install -y build-essential pkg-config binutils-dev software-properties-common git wget curl python3-dev libcurl4-openssl-dev libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip && \
   apt-get update && \
   wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1 apt-key add - && \
   apt-add-repository 'deb https://apt.kitware.com/ubuntu/ bionic main' && \
