@@ -1,11 +1,11 @@
 # Pull base image.
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 # Install.
 RUN \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y build-essential pkg-config binutils-dev software-properties-common git wget curl liblua5.2-0 libfontconfig python3-dev python3.6-dev python3.7-dev python3.8-dev libcurl4-openssl-dev valgrind libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip freeglut3-dev libglew1.5-dev libglu1-mesa-dev libgl1-mesa-dev libssl-dev && \
+  apt-get install -y rename build-essential pkg-config binutils-dev software-properties-common git wget curl liblua5.2-0 libfontconfig python3-dev libcurl4-openssl-dev valgrind libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip freeglut3-dev libglew1.5-dev libglu1-mesa-dev libgl1-mesa-dev libssl-dev && \
   curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
   apt-get install -y nodejs && \
   apt-get update && \
