@@ -6,7 +6,7 @@ RUN \
   apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y rename build-essential pkg-config binutils-dev software-properties-common git wget curl liblua5.2-0 libfontconfig python3-dev libcurl4-openssl-dev valgrind libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip freeglut3-dev libglew1.5-dev libglu1-mesa-dev libgl1-mesa-dev libssl-dev && \
-  curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+  curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
   apt-get install -y nodejs && \
   apt-get update && \
   wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1 apt-key add - && \
