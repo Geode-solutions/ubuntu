@@ -1,6 +1,9 @@
 # Pull base image.
 FROM ubuntu:20.04
 
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Paris
+
 # Install.
 RUN \
   apt-get update && \
