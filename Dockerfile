@@ -8,7 +8,7 @@ ENV TZ=Europe/Paris
 RUN \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y rename build-essential zstd ninja-build ca-certificates pkg-config binutils-dev software-properties-common git wget curl liblua5.2-0 libfontconfig python3-dev libcurl4-openssl-dev valgrind libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip freeglut3-dev libglew1.5-dev libglu1-mesa-dev libgl1-mesa-dev libssl-dev
+  apt-get install -y rename build-essential zstd ninja-build ca-certificates pkg-config binutils-dev software-properties-common git wget curl liblua5.2-0 libfontconfig python3-dev libcurl4-openssl-dev valgrind libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip freeglut3-dev libglew-dev libglu1-mesa-dev libgl1-mesa-dev libssl-dev
 
 RUN \
   wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null && \
