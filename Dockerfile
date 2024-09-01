@@ -13,7 +13,8 @@ RUN \
 RUN \
   wget https://apt.llvm.org/llvm.sh && \
   chmod u+x llvm.sh && \
-  ./llvm.sh 19 all
+  ./llvm.sh 19 && \
+  apt-get -y install clang-19-doc
 
 RUN \
   wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null && \
