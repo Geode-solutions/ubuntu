@@ -11,4 +11,4 @@ jobs:
       image_name: "ubuntu"
       tag: ${{ github.ref_name }}
     secrets:
-      TOKEN: ${{github.token }}
+      TOKEN: ${{ secret.TOKEN }}
