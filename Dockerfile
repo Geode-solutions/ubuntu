@@ -13,14 +13,14 @@ RUN \
 RUN \
   wget https://apt.llvm.org/llvm.sh && \
   chmod u+x llvm.sh && \
-  ./llvm.sh 19 && \
-  apt-get -y install clang-tools-19
+  ./llvm.sh 22 && \
+  apt-get -y install clang-tools-22
 
 RUN \
   wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null && \
   echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ jammy main' | tee /etc/apt/sources.list.d/kitware.list >/dev/null && \
   apt-add-repository "deb https://apt.kitware.com/ubuntu/ jammy main" && \
-  curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
+  curl -sL https://deb.nodesource.com/setup_24.x | bash - && \
   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && \
   chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && \
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null

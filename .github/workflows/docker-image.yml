@@ -8,7 +8,7 @@ jobs:
   build:
     uses: Geode-solutions/actions/.github/workflows/docker-build-squash-push.yml@master
     with:
-      image_name: "ubuntu"
       tag: ${{ github.ref_name }}
+      google: false
     secrets:
       TOKEN: ${{ secrets.TOKEN }}
