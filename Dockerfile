@@ -14,7 +14,9 @@ RUN \
   wget https://apt.llvm.org/llvm.sh && \
   chmod u+x llvm.sh && \
   ./llvm.sh 22 && \
-  apt-get -y install clang-tools-22
+  apt-get -y install clang-tools-22 && \
+  update-alternatives --install /usr/bin/clang clang /usr/bin/clang-22 100 && \
+  update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-22 100
 
 RUN \
   wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null && \
