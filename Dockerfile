@@ -8,7 +8,7 @@ ENV TZ=Europe/Paris
 RUN \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y bash rename build-essential zstd ninja-build ca-certificates pkg-config binutils-dev software-properties-common git wget curl liblua5.2-0 libfontconfig python3-dev valgrind libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip freeglut3-dev libglew-dev libglu1-mesa-dev libgl1-mesa-dev jq clang libomp-dev
+  apt-get install -y bash rename build-essential zstd ninja-build ca-certificates pkg-config binutils-dev software-properties-common git wget curl liblua5.2-0 libfontconfig python3-dev valgrind libdw-dev libiberty-dev zlib1g-dev doxygen python3-pip freeglut3-dev libglew-dev libglu1-mesa-dev libgl1-mesa-dev jq
 
 RUN \
   wget https://apt.llvm.org/llvm.sh && \
