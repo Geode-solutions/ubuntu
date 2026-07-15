@@ -14,7 +14,7 @@ RUN \
   wget https://apt.llvm.org/llvm.sh && \
   chmod u+x llvm.sh && \
   ./llvm.sh 22 && \
-  apt-get -y install clang-tools-22 && \
+  apt-get -y install clang-tools-22 libomp-22-dev && \
   update-alternatives --install /usr/bin/clang clang /usr/bin/clang-22 100 && \
   update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-22 100
 
